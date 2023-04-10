@@ -1,0 +1,5 @@
+{
+    "code-runner.runInTerminal": true,
+    "editor.tabSize": 2,
+    "python.analysis.typeCheckingMode": "basic"
+}
