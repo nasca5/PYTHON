@@ -1,5 +1,6 @@
 {
     "code-runner.runInTerminal": true,
     "editor.tabSize": 2,
-    "python.analysis.typeCheckingMode": "basic"
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.fontFamily": "D2Coding, Consolas, 'Courier New', monospace"
 }
