@@ -1,4 +1,11 @@
 {
+<<<<<<< HEAD
   "editor.tabSize": 2,
   "editor.fontFamily": "D2Coding, Consolas, 'Courier New', monospace"
+=======
+    "code-runner.runInTerminal": true,
+    "editor.tabSize": 2,
+    "python.analysis.typeCheckingMode": "basic",
+    "editor.fontFamily": "D2Coding, Consolas, 'Courier New', monospace"
+>>>>>>> 619ea6b3659da0bc7d74e9380d6f962443d0ad6a
 }
