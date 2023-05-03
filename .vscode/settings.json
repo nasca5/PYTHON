@@ -4,4 +4,6 @@
   "python.analysis.typeCheckingMode": "basic",
   "editor.fontFamily": "D2Coding, Consolas, 'Courier New', monospace",
   "files.autoGuessEncoding": true,
+  "vim.vimrc.enable" : true,
+  "vim.vimrc.path" : "C:\\Users\\nasca\\.vimrc"
 }
