@@ -27,37 +27,40 @@
 # classname.메소드 형태로 호출할 때는 object를 반드시 첫 번째 매개변수인 self에 전달해주어야 한다. object를 통해 전달할 때는 self는 생략한다.
 
 
-# class FourCal:
-#     def __init__(self, first, second):
-#         self.first = first
-#         self.second = second
-#
-#     def setdata(self, first, second):
-#         self.first = first
-#         self.second = second
-#
-#     def add(self):
-#         result = self.first + self.second
-#         return result
-#
-#     def sub(self):
-#         result = self.first - self.second
-#         return result
-#
-#     def mul(self):
-#         result = self.first * self.second
-#         return result
-#
-#     def div(self):
-#         result = self.first / self.second
-#         return result
-#
-#
-# a = FourCal(4, 2)
-# b = FourCal(3, 7)
+class FourCal:
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
 
-# a.setdata(4, 2)
-# b.setdata(3, 7)
+    def setdata(self, first, second):
+        self.first = first
+        self.second = second
+
+    def add(self):
+        result = self.first + self.second
+        return result
+
+    def sub(self):
+        result = self.first - self.second
+        return result
+
+    def mul(self):
+        result = self.first * self.second
+        return result
+
+    def div(self):
+        result = self.first / self.second
+        return result
+
+
+a = FourCal(4, 2)
+b = FourCal(3, 7)
+
+a.setdata(4, 2)
+b.setdata(3, 7)
+
+print(id(a.first))
+print(id(b.first))
 
 # 위의 object a와 b는 서로 영향을 주지 않고 고유의 성향을 가지므로 object a에서 first의 값에 4를 주고
 #  object b에서 first의 값에 3을 줘도 a나 b의 값이 변경되거나 하지 않는다.
@@ -80,60 +83,61 @@
 
 # FourCal() class를 이용하여 a의 b제곱을 구하는 MoreFourCal() class 만들기
 
-# class MoreFourCal(FourCal) :
-#   def pow(self) :
-#     result = self.first ** self.second
-#     return result
-#
-# a = MoreFourCal(4, 2)
-# print('안녕하세요')
-#
-# # MoreFourCal() class는 FourCal() class를 상속했으므로 FourCal() class의 모든 기능을 사용할 수 있어야 한다.
-# # 위의 예시처럼 상속은 기존 class는 그대로 유지한 채로 class의 기능을 확장시킬 때 주로 사용한다.
-#
-# # 메소드 오버라이딩(overriding)
-# # 메소드 오버라이딩은 부모 class에 있는 메소드를 동일한 이름으로 다시 만드는 것을 의미한다.
-# class SafeFourCal(FourCal) :
-#   def div(self) :
-#     if self.second == 0 :
-#       return 0;
-#     else :
-#       return self.first / self.second
-#
-# a = SafeFourCal(4, 0)
-#
-# print(a.div())
-#
-# # class 변수 : object 변수는 다른 객체들에게 영향을 받지 않지만, class 변수는 class로 만든 모든 객체에 공유된다는 특징이 있다.
-#
-# class Family :
-#   lastname = '강'
-#
-# a = Family()
-# b = Family()
-#
-# print(a.lastname)
-# print(b.lastname)
-#
-# Family.lastname = 'Kang'
-#
-# print(a.lastname)
-# print(b.lastname)
+class MoreFourCal(FourCal) :
+  def pow(self) :
+    result = self.first ** self.second
+    return result
+
+a = MoreFourCal(4, 2)
+print('안녕하세요')
+
+# MoreFourCal() class는 FourCal() class를 상속했으므로 FourCal() class의 모든 기능을 사용할 수 있어야 한다.
+# 위의 예시처럼 상속은 기존 class는 그대로 유지한 채로 class의 기능을 확장시킬 때 주로 사용한다.
+
+# 메소드 오버라이딩(overriding)
+# 메소드 오버라이딩은 부모 class에 있는 메소드를 동일한 이름으로 다시 만드는 것을 의미한다.
+class SafeFourCal(FourCal) :
+  def div(self) :
+    if self.second == 0 :
+      return 0;
+    else :
+      return self.first / self.second
+
+a = SafeFourCal(4, 0)
+
+print(a.div())
+
+# class 변수 : object 변수는 다른 객체들에게 영향을 받지 않지만, class 변수는 class로 만든 모든 객체에 공유된다는 특징이 있다.
+
+class Family :
+  lastname = '강'
+
+a = Family()
+b = Family()
+
+print(a.lastname)
+print(b.lastname)
+
+Family.lastname = 'Kang'
+
+print(a.lastname)
+print(b.lastname)
 
 # 위의 예시를 보면 Family class의 변수의 값을 바꾸면 a.lastname과 b.lastname의  값이 모두 바뀐다는 것을 알 수 있다.
 # 이처럼 class 변수는 class로 만든 모든 object에 공유된다는 사실을 알 수 있다.
 
 # 모듈(module) : 모듈이란 함수나 변수 class를 모아 놓은 파일이라고 할 수 있다. 보통 파이썬으로 프로그래밍을 하면 모듈을 굉장히 많이 사용하게 된다.
 # 모듈 만들기
-# import test
-#
-# print(test.add(4, 3))
+import test
+
+print(test.add(4, 3))
 
 # 위의 예시처럼 모듈을 사용하려면 import 모듈 이름을 하면 된다. 내가 만든 모듈을 이용하고 싶으면 만들어놓은 모듈이 같은 directory 내에 있어야 한다.
-# from test4 import add
+from test4 import add
 
-# print(add(3, 5))
+print(add(3, 5))
 
 # 만약 모듈 자체가 아니라 모듈에 있는 함수만 불러오고 싶다면 위의 예시처럼 하면 된다.
 # 만약 모듈을 직접 실행하게 되면 모듈 안에 출력문이 있다면 바로 출력되어버리는데, 이때 모듈에다가 아래의 문장들을 추가하면 그러한 오류를 막을 수 있다.
-# if __name__ == "__main__"
+if __name__ == "__main__" :
+    
