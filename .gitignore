@@ -3,3 +3,5 @@ test.txt
 vim_shortcuts.txt
 __pycache__
 PYTHON_Workspace.code-workspace
+tips/
+my_package

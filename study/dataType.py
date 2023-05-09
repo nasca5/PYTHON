@@ -48,6 +48,8 @@
 # print('I eat %d apple' % number)
 # # 두 개 이상의 값
 # print('I eat %d~%d apple' % (number, number2))
+
+
 # # format 함수를 사용한 포매팅 : 문자열의 format 함수를 사용하면 좀 더 발전된 스타일로 문자열 포맷을 지정할 수 있다.
 # # 숫자 바로 대입
 # print("I eat {0} apples".format(3))
